@@ -1,9 +1,9 @@
 import axios from "axios";
-const URL = "http://localhost:4444/api";
+// const URL = "http://localhost:4444";
 
 export const getAllTransactions = (query, page) =>
   axios
-    .post(`${URL}/transactions`, {
+    .post("/api/transactions", {
       query: query,
       page: page,
     })

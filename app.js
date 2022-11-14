@@ -31,6 +31,12 @@ app.use((err, _, res, __) => {
   });
 });
 
+app.use("/", express.static(path.join(__dirname, "client", "build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+});
+
+
 db.then(() => {
   server.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 }).catch((error) =>
