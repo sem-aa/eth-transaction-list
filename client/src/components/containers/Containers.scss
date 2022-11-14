@@ -1,0 +1,21 @@
+.Container {
+  flex: 1;
+
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @media screen and (min-width: 480px) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 75px;
+    margin-left: 75px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 130px;
+    margin-right: 130px;
+  }
+}

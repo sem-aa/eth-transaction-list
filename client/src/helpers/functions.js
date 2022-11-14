@@ -1,0 +1,1 @@
+export  const convertNumber = (number) => `0x${number.toString(16)}`;

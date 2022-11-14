@@ -1,0 +1,71 @@
+.Pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: auto;
+
+  &__pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-item {
+      min-width: 20px;
+      padding: 14px 21px 14px 21px;
+
+      border: 2px solid var(--grey-color);
+      border-radius: 8px;
+      
+      cursor: pointer;
+      text-align: center;
+      color: var(--white-color);
+      font-size: 16px;
+    }
+
+    &-item:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+  &__btn-left {
+    margin-right: 24px;
+    cursor: pointer;
+    width: 12px;
+    height: 24px;
+    background-image: url("../../img/svg/left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-active {
+      margin-right: 24px;
+      cursor: pointer;
+      width: 12px;
+      height: 24px;
+      background-image: url("../../img/svg/right.svg");
+      transform: rotate(180deg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__btn-right {
+    margin-left: 24px;
+    cursor: pointer;
+    width: 12px;
+    height: 24px;
+    background-image: url("../../img/svg/left.svg");
+    transform: rotate(180deg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-active {
+      margin-left: 24px;
+      cursor: pointer;
+      width: 12px;
+      height: 24px;
+      background-image: url("../../img/svg/right.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
