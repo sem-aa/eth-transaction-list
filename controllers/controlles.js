@@ -8,7 +8,7 @@ const {
   getQueryTransactions,
   updateTransactions,
 } = require("../model/transactions");
-const { MAX_QNT_BLOCK } = require("../helpers/constants");
+// const { MAX_QNT_BLOCK } = require("../helpers/constants");
 
 const getTransactions = async (req, res, next) => {
   const { page, query } = req.body;
@@ -46,8 +46,8 @@ const addTransactionsToBd = async () => {
     allTransactionFromBd[allTransactionFromBd.length - 1].blockNumber
   ) {
     const result = await getLastBlockTransactions(lastNumberBlock);
-    if (qntAddBlock >= MAX_QNT_BLOCK) {
-      console.log(`Add to DB ${MAX_QNT_BLOCK}`);
+    if (qntAddBlock >= 1000) {
+      console.log(`Add to DB 1000`);
       return;
     }
     const qntAddBlock = await updateBlockConfirm(lastNumberBlock);
