@@ -59,7 +59,7 @@ const addTransactionsToBd = async () => {
   return addTransactionsToBd();
 };
 
-// addTransactionsToBd();
+addTransactionsToBd();
 
 const wait = async (time) => {
   console.log("wait");
