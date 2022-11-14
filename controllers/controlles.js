@@ -33,6 +33,7 @@ const updateBlockConfirm = async (currentBlockNumber) => {
 };
 
 const addTransactionsToBd = async () => {
+  console.log("fn add transaction");
   const allTransactionFromBd = await getAllTransactions();
   const lastNumberBlock = await getLastBlockNumber();
   if (!allTransactionFromBd.length) {
@@ -51,6 +52,7 @@ const addTransactionsToBd = async () => {
     }
     const qntAddBlock = await updateBlockConfirm(lastNumberBlock);
     await addTransactionsBd(result);
+    console.log("add block");
   } else {
     await wait(5000);
     return addTransactionsToBd();
